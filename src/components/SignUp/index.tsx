@@ -4,10 +4,28 @@ import LookingForInput from '../LookingForInput'
 import styles from './SignUp.module.css'
 import { SetStateAction, useState } from 'react'
 
+const project:  HTMLElement | null = document.getElementById('projects')
+const design: HTMLElement | null= document.getElementById('designs')
+
+function projects() {
+  project.style.backgroundColor = '#3030A5'
+  design.style.backgroundColor = '#ffffff'
+  project.style.color = '#ffffff'
+  design.style.color = '#000000'
+}
+
+function designs() {
+  project.style.backgroundColor = '#ffffff'
+  design.style.backgroundColor = '#3030A5'
+  project.style.color = '#000000'
+  design.style.color = '#ffffff'
+}
+
 function SignUp() {
   function getName(e: { target: { value: SetStateAction<string> } }) {
     setNameDisplay(e.target.value)
   }
+
   const [nameDisplay, setNameDisplay] = useState('Isack')
 
   return (
@@ -39,11 +57,11 @@ function SignUp() {
             <span>Looking For?</span>
           </div>
           <div className={styles.lookingForInput}>
-            <div className={styles.lookingForInputItem}>
-              <LookingForInput name="Projects" />
+            <div className={styles.lookingForInputItem} id='projects'>
+              <LookingForInput name="Projects" changeBackground={projects} />
             </div>
-            <div className={styles.lookingForInputItem}>
-              <LookingForInput name="Designs" />
+            <div className={styles.lookingForInputItem} id='designs'>
+              <LookingForInput name="Designs" changeBackground={designs}/>
             </div>
           </div>
         </div>
