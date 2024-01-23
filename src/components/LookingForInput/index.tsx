@@ -1,6 +1,6 @@
 type LookingForInputProps = {
   name: string
-  changeBackground: React.ChangeEventHandler<HTMLInputElement>
+  changeBackground?: React.ChangeEventHandler<HTMLInputElement>
 }
 
 function LookingForInput({ name, changeBackground }: LookingForInputProps) {

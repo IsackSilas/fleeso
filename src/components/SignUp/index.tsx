@@ -1,27 +1,9 @@
-import { SetStateAction, useState } from 'react'
+import { SetStateAction, useState} from 'react'
 import Button from '../Button'
 import FormInput from '../FormInput'
 import LookingForInput from '../LookingForInput'
 import styles from './SignUp.module.css'
 
-
-
-const project = document.getElementById('projects')
-const design = document.getElementById('designs')
-
-function projects() {
-  project!.style.backgroundColor = '#3030A5'
-  design!.style.backgroundColor = '#ffffff'
-  project!.style.color = '#ffffff'
-  design!.style.color = '#000000'
-}
-
-function designs() {
-  project!.style.backgroundColor = '#ffffff'
-  design!.style.backgroundColor = '#3030A5'
-  project!.style.color = '#000000'
-  design!.style.color = '#ffffff'
-}
 
 function SignUp() {
   function getName(e: { target: { value: SetStateAction<string> } }) {
@@ -29,6 +11,28 @@ function SignUp() {
   }
 
   const [nameDisplay, setNameDisplay] = useState('Isack')
+  // const [color1, setColor1] = useState()
+  // const [color2, setColor2] = useState()
+  // const click2 = color2 => {
+  //   setColor2(color2)   
+  // }
+
+  // useEffect(() => {
+  //   document.getElementById('designs').style.backgroundColor = color2
+  // }, [color2])
+  // project.style.backgroundColor = '#3030A5'
+  // design.style.backgroundColor = '#ffffff'
+  // project.style.color = '#ffffff'
+  // design.style.color = '#000000'
+
+
+
+
+  // project.style.backgroundColor = '#ffffff'
+  // design.style.backgroundColor = '#3030A5'
+  // project.style.color = '#000000'
+  // design!.style.color = '#ffffff'
+
 
   return (
     <section className={styles.register}>
@@ -60,10 +64,10 @@ function SignUp() {
           </div>
           <div className={styles.lookingForInput}>
             <div className={styles.lookingForInputItem} id='projects'>
-              <LookingForInput name="Projects" changeBackground={projects} />
+              <LookingForInput name="Projects"/>
             </div>
             <div className={styles.lookingForInputItem} id='designs'>
-              <LookingForInput name="Designs" changeBackground={designs}/>
+              <LookingForInput name="Designs"/>
             </div>
           </div>
         </div>
