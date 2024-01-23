@@ -1,24 +1,26 @@
+import { SetStateAction, useState } from 'react'
 import Button from '../Button'
 import FormInput from '../FormInput'
 import LookingForInput from '../LookingForInput'
 import styles from './SignUp.module.css'
-import { SetStateAction, useState } from 'react'
 
-const project:  HTMLElement | null = document.getElementById('projects')
-const design: HTMLElement | null= document.getElementById('designs')
+
+
+const project = document.getElementById('projects')
+const design = document.getElementById('designs')
 
 function projects() {
-  project.style.backgroundColor = '#3030A5'
-  design.style.backgroundColor = '#ffffff'
-  project.style.color = '#ffffff'
-  design.style.color = '#000000'
+  project!.style.backgroundColor = '#3030A5'
+  design!.style.backgroundColor = '#ffffff'
+  project!.style.color = '#ffffff'
+  design!.style.color = '#000000'
 }
 
 function designs() {
-  project.style.backgroundColor = '#ffffff'
-  design.style.backgroundColor = '#3030A5'
-  project.style.color = '#000000'
-  design.style.color = '#ffffff'
+  project!.style.backgroundColor = '#ffffff'
+  design!.style.backgroundColor = '#3030A5'
+  project!.style.color = '#000000'
+  design!.style.color = '#ffffff'
 }
 
 function SignUp() {
