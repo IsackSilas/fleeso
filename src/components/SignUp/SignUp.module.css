@@ -40,7 +40,7 @@
   color: #cfcfcf;
 }
 
-.singUp {
+.signUp {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -52,7 +52,7 @@
   display: flex;
   flex-direction: column;
 }
-.singUpTitle {
+.signUpTitle {
   line-height: 2rem;
 }
 
@@ -98,8 +98,20 @@
 @media (max-width: 780px) {
   .register {
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .card {
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .register {
+    height: 100%;
+  }
+
+  .signUp {
+    padding-block: 0;
   }
 }

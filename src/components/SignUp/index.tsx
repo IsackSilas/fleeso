@@ -27,8 +27,8 @@ function SignUp() {
         </div>
       </div>
 
-      <div className={styles.singUp}>
-        <div className={styles.singUpTitle}>
+      <div className={styles.signUp}>
+        <div className={styles.signUpTitle}>
           <h2>Sign up</h2>
           <p>
             Have an account? <a href="#">Register</a>
