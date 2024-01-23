@@ -2,7 +2,7 @@ type InputProps = {
   type: string
   placeholder: string
   name: string
-  change: React.ChangeEventHandler<HTMLInputElement>
+  change?: React.ChangeEventHandler<HTMLInputElement>
 }
 
 function Input({ type, placeholder, name, change }: InputProps) {

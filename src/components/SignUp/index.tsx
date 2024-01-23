@@ -51,10 +51,10 @@ function SignUp() {
           <FormInput name="First Name" placeholder="Ex: Isack" type="text" change={getName} />
         </div>
         <div className={styles.signUpInput}>
-          <FormInput name="E-mail" placeholder="Ex: exemplo@email.com" type="email" change={null} />
+          <FormInput name="E-mail" placeholder="Ex: exemplo@email.com" type="email" />
         </div>
         <div className={styles.signUpInput}>
-          <FormInput name="Senha" placeholder="Ex: Teste123@" type="password" change={null} />
+          <FormInput name="Senha" placeholder="Ex: Teste123@" type="password" />
         </div>
         <div>
           <Button text="Create Account" />
